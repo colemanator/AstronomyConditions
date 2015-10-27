@@ -1,0 +1,48 @@
+extends layout
+
+
+block content
+  header
+    h1(class='title')= title
+    h1
+  main
+    div(class='column first-column')
+      div(id='map-wrapper')
+        div(id='map')
+      script(src='javascripts/googleMaps.js')
+      script(src='javascripts/googleMapsAPI.js')
+      script(src="https://maps.googleapis.com/maps/api/js?signed_in=true&callback=initMap" async defer)
+    div(class='column')
+      div(class='column-header')
+        h1(class='index')='--calculating--'
+        p(class='index-prompt')='Viewing Condition Index'
+      div(class='column-main')
+        table
+          tr
+            td='percentage of moon illumination'
+            td(class='percentIlluminated')='--'
+          tr
+            td='sunrise'
+            td(class='sunrise')='--'
+          tr
+            td='sunset'
+            td(class='sunset')='--'
+          tr
+            td='elevation'
+            td(class='elevation')='--'
+          tr
+            td='weather'
+            td(class='weather')='--'
+          tr
+            td='humidity'
+            td(class='humidity')='--'
+          tr
+            td='wind'
+            td(class='wind')='--'
+          tr
+            td='visibility'
+            td(class='visibility')='--'
+
+
+
+
